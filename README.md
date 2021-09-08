@@ -1,1 +1,1 @@
-# deckCards
+# Deck Of Cards java project
