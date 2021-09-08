@@ -14,5 +14,12 @@ public class Deck {
                 cards.add(new Card(SUITS[suit],RANKS[rank]));   
             } }
         }
+	/**
+	 * Method to shuffle the 52 cards
+	 */
+	public void shuffle()
+	{
+	    Collections.shuffle(cards);
+	}
 }
     
