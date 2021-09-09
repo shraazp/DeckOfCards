@@ -28,6 +28,18 @@ public class Deck {
     public ArrayList<Card> getCards() {
         return cards;
     }
+    /**
+     * method to compare two ranks
+     * @param rank1 one rank
+     * @param rank2 next rank to be compared
+     * @return rank which has lesser value
+     */
+    public Card compare(Card rank1,Card rank2) {
+        if(RANKS.indexOf(rank1.getRank())<RANKS.indexOf(rank2.getRank()))
+            return rank1;   
+        else
+            return rank2;
+       }
     
 }
     

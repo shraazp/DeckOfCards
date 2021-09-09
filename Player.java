@@ -78,8 +78,10 @@ public class Player {
             {
                //to get the player according to sequence 
                Hand playerHand = players.get(sequence.get(j));
+               //get a random card
                int x=random.nextInt(tempCards.size());
                playerHand.setHand(tempCards.get(x));
+               //remove the assigned card so its not repeated
                tempCards.remove(x);
             }
         }  
@@ -90,10 +92,13 @@ public class Player {
      */
     public void verify()
     {   
+        //to get each player
         for (Hand player:players)
         {
+            //cards in players hand
             List<Card> p = player.getHand();
             int s=0,h=0,d=0,c=0;
+            //for each card
             for(Card i : p)
             {  
                 String j = i.getSuit();
@@ -115,8 +120,55 @@ public class Player {
             System.out.println("Diamonds:"+d);
             System.out.println("Hearts:"+h);
             System.out.println("Spades:"+s);
+        } }
+    /**
+     * method to sort cards according to ranks
+     * store the cards in players hands in ascending order
+     * Ace has the highest value
+     */
+    public void sort()
+    {
+        //to get each player
+        for (Hand player:players)
+        {
+            //hand of the player
+            List<Card> p = player.getHand();
+            //to sort the cards
+            for(int i=0;i<p.size();i++)
+            {
+                for(int j=0;j<p.size()-i-1;j++)
+                {
+                    //get the card
+                    Card rank1=p.get(j);
+                    Card rank2=p.get(j+1);
+                    //to compare which card has highest rank
+                    if(deck.compare(rank1,rank2)==rank2)
+                    {
+                        //replace the cards
+                        p.set(j, rank2);
+                        p.set(j+1,rank1);
+                    }   
+                }
+            } }
+    }
+    /**
+     * to print the cards in players hands
+     */
+    public void print()
+    {
+        //to get each player
+        for (Hand player:players)
+        {
+            System.out.println("-------------");
+            System.out.println("player:"+players.indexOf(player));
+            //returns set of cards in players hand
+            List<Card> s = player.getHand();
+            //to print each card
+            for(Card i : s)
+            System.out.println(i.getRank()+" of "+i.getSuit());
+            
         }
-      }
+    }
 }
    
 

@@ -20,6 +20,11 @@ public class Test {
         player.getOrder();
         player.cardDistribution();
         player.verify();
+        System.out.println("Before sorting");
+        player.print();
+        player.sort();
+        System.out.println("After sorting");
+        player.print();
         sc.close();         
     }
 

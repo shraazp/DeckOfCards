@@ -9,10 +9,10 @@ public class Card {
 	/**
 	* Constructs a card of the given rank and suit.
 	*/
-	public Card(String suits, String ranks) 
+	public Card(String suit, String rank) 
 	{
-	    this.rank = ranks;
-	    this.suit = suits;
+	    this.rank = rank;
+	    this.suit = suit;
 	}
 	/**
 	* Gets the card's rank.
