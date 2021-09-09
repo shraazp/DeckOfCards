@@ -5,7 +5,7 @@ public class Deck {
 	/**
      * Constructs a standard deck of 52 cards.
      */
-	private static final String[] RANKS = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	private static final List<String> RANKS = new ArrayList<String>(List.of("2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King","Ace"));
 	private static final String[] SUITS = {"Clubs", "Diamonds", "Hearts", "Spades"};
 	public Deck() {
         this.cards = new ArrayList<Card>(52);
