@@ -11,8 +11,8 @@ public class Card {
 	*/
 	public Card(String suits, String ranks) 
 	{
-	    this.rank = suits;
-	    this.suit = ranks;
+	    this.rank = ranks;
+	    this.suit = suits;
 	}
 	/**
 	* Gets the card's rank.
