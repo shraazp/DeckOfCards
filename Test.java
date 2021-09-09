@@ -19,8 +19,8 @@ public class Test {
         Player player=new Player(n);
         player.getOrder();
         player.cardDistribution();
-        sc.close();
-            
+        player.verify();
+        sc.close();         
     }
 
 }

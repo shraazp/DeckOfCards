@@ -28,6 +28,7 @@ class Hand{
      */
     public void setHand(Card a)
     {
+        //one card is added at a time
         this.hand.add(a);
     }
 }
@@ -83,6 +84,39 @@ public class Player {
             }
         }  
     }  
+    /**
+     * Method to check how many number of spades,diamonds,hearts and clubs 
+     * with each player
+     */
+    public void verify()
+    {   
+        for (Hand player:players)
+        {
+            List<Card> p = player.getHand();
+            int s=0,h=0,d=0,c=0;
+            for(Card i : p)
+            {  
+                String j = i.getSuit();
+                switch(j)
+                {
+                case "Spades":s++;
+                break;
+                case "Diamonds":d++;
+                break;
+                case "Hearts":h++;
+                break;
+                case "Clubs":c++;
+                break;
+                }
+            }
+            System.out.println("-------------");
+            System.out.println("player:"+players.indexOf(player));
+            System.out.println("Clubs:"+c);
+            System.out.println("Diamonds:"+d);
+            System.out.println("Hearts:"+h);
+            System.out.println("Spades:"+s);
+        }
+      }
 }
    
 
