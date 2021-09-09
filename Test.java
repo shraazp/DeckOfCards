@@ -17,6 +17,9 @@ public class Test {
             n=sc.nextInt();
         }
         Player player=new Player(n);
+        player.getOrder();
+        player.cardDistribution();
+        sc.close();
             
     }
 
