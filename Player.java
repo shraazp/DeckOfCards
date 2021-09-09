@@ -47,7 +47,7 @@ public class Player {
         deck=new Deck();
         players=new ArrayList<Hand>(n);
         for(int i=0;i<n;i++)
-            players.add(i,new Hand());
+            players.add(new Hand());
     }
     /**
      * Method to sequence the players order
@@ -97,29 +97,29 @@ public class Player {
         {
             //cards in players hand
             List<Card> p = player.getHand();
-            int s=0,h=0,d=0,c=0;
+            int spade=0,heart=0,diamond=0,club=0;
             //for each card
             for(Card i : p)
             {  
                 String j = i.getSuit();
                 switch(j)
                 {
-                case "Spades":s++;
+                case "Spades":spade++;
                 break;
-                case "Diamonds":d++;
+                case "Diamonds":diamond++;
                 break;
-                case "Hearts":h++;
+                case "Hearts":heart++;
                 break;
-                case "Clubs":c++;
+                case "Clubs":club++;
                 break;
                 }
             }
             System.out.println("-------------");
             System.out.println("player:"+players.indexOf(player));
-            System.out.println("Clubs:"+c);
-            System.out.println("Diamonds:"+d);
-            System.out.println("Hearts:"+h);
-            System.out.println("Spades:"+s);
+            System.out.println("Clubs:"+club);
+            System.out.println("Diamonds:"+diamond);
+            System.out.println("Hearts:"+heart);
+            System.out.println("Spades:"+spade);
         } }
     /**
      * method to sort cards according to ranks
